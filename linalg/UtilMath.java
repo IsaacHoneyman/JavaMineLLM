@@ -8,7 +8,8 @@ public final class UtilMath {
     public static final float SQRT_2_OVER_PI = 0.7978845608f;
     public static final float INV_SQRT_2_OVER_PI = 0.3989422804f;
     public static final float GELU_APROX = 0.044715f;
-    public static final float EPSILON5 = 1e-5f;
+    public static final float EPSILON_5 = 1e-5f;
+    public static final float NEG_BILLON = -1e9f;
 
     private UtilMath() {}
 

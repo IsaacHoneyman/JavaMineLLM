@@ -262,7 +262,7 @@ public final class Matrix {
             }
             float meanSquare = squareSum / columns;
 
-            float invRms = (float) (1.0 / Math.sqrt(meanSquare + UtilMath.EPSILON5));
+            float invRms = (float) (1.0 / Math.sqrt(meanSquare + UtilMath.EPSILON_5));
 
             for (int x = 0; x < columns; x++) {
                 result.data[rowOffset + x] = data[rowOffset + x] * invRms;
@@ -343,7 +343,7 @@ public final class Matrix {
                 dotP += this.data[rowOffset + x] * gradOutput.data[rowOffset + x];
 
             }
-            float invRms = (float) (1.0 / Math.sqrt((squareSum / columns) + UtilMath.EPSILON5));
+            float invRms = (float) (1.0 / Math.sqrt((squareSum / columns) + UtilMath.EPSILON_5));
             float scale = (dotP * invRms * invRms) / columns;
 
             for (int x = 0; x < columns; x++) {
@@ -371,7 +371,7 @@ public final class Matrix {
         float loss = 0f;
         for (int i = 0; i < preds.data.length; i++) {
             if (targs.data[i] > 0f) {
-                loss -= targs.data[i] * (float) Math.log(preds.data[i] + UtilMath.EPSILON5);
+                loss -= targs.data[i] * (float) Math.log(preds.data[i] + UtilMath.EPSILON_5);
             }
         }
 
